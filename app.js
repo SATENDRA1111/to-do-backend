@@ -24,13 +24,14 @@ app.use(
 })
 );
 
-app.get("/",(req,res)=>{
-res.send("Nice working");
-});
 
 //  using routs
 app.use("/api/v1/users",userRouter);
 app.use("/api/v1/task",taskRouter);
+
+app.get("/",(req,res)=>{
+res.send("Nice working");
+});
 
 // use errorMiddlewarea
 app.use(errorMiddleware);
