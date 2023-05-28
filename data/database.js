@@ -3,11 +3,10 @@ import mongoose from "mongoose";
  export const connectdb=()=>{
 mongoose.connect(process.env.MONGO_URI,{
 dbName:"backendapi",})
-// .then(()=> console.count("database connected "))
+.then(()=> console.count("database connected "))
 
-// .catch((e)=> console.log(e))
-   .then((c) => console.log(`Database Connected with ${c.connection.host}`))
-    .catch((e) => console.log(e));
+.catch((e)=> console.log(e))
+  
 }
 
 // if want to change cloud url then change here---MONGO_URI="mongodb://127.0.0.1:27017"(in config.env)
