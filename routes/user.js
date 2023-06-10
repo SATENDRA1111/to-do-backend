@@ -5,11 +5,11 @@ import { isauthenticated } from "../middlewares/auth.js";
 
 const router = express.Router();
 
-router.post("/new", register)
+router.post("/new", register);
 
 router.post("/login",login);
 
-router.get("/me",isauthenticated,getmyprofile)
+router.get("/me",isauthenticated,getmyprofile);
 
 router.get("/logout",logout);
 
