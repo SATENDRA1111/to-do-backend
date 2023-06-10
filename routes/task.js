@@ -1,8 +1,8 @@
-import Express  from "express";
+import express  from "express";
 import { deletetask, getmytask, newtask, updatetask } from "../controller/task.js";
 import { isauthenticated } from "../middlewares/auth.js";
 
-const router =Express.Router();
+const router =express.Router();
 
 router.post("/new",isauthenticated,newtask);
 
