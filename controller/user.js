@@ -17,7 +17,7 @@ import ErrorHandlere from "../middlewares/error.js";
   
     if(!ismatch) return next (new ErrorHandlere("Invalid Password",400));
  
-    sendcookie(user, res,'welcome back '+ user.name ,200)
+    sendCookie(user, res, `Welcome back, ${user.name}`, 200);
   } 
     catch (error) {
     next(error);
